@@ -1,5 +1,5 @@
 
-name: CI-Polaris-integration
+name: CI-Polaris-integration-SAST
 on:
   push:
     branches: [ main, master, develop, stage, polaris ]
