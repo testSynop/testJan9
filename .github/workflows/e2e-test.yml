@@ -14,7 +14,7 @@ jobs:
       - name: Checkout Source
         uses: actions/checkout@v3
       - name: Coverity Scan
-        uses: blackduck-inc/black-duck-security-scan@main
+        uses: blackduck-inc/black-duck-security-scan@latest
         with:
           ### SCANNING: Required fields
           #bridgecli_download_url: "https://repo.blackduck.com/bds-integrations-release/com/blackduck/integration/bridge/binaries/bridge-cli-bundle/3.4.0/bridge-cli-bundle-3.4.0-macos_arm.zip"
