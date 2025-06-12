@@ -1,7 +1,7 @@
 name: CI-Polaris 
 on:
   push:
-    branches: [ main, master, develop, stage ]
+    branches: [ main, master, develop, stage, polaris ]
   pull_request:
     branches: [ main ]
   workflow_dispatch:
