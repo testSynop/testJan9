@@ -1,7 +1,7 @@
 name: CI-Polaris 
 on:
         push:
-            branches: [ main, master, develop, stage, release ]
+            branches: [ main, master, develop, stage, release, polaris ]
         pull_request:
             branches: [ main, master, develop, stage, release ]  
 jobs:
