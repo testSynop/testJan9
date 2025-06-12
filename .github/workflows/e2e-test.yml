@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main, master, develop, stage ]
   pull_request:
-    branches: [ main, polaris ]
+    branches: [ polaris ]
   workflow_dispatch:
 
 jobs:
@@ -51,7 +51,7 @@ jobs:
           polaris_project_name: ${{ github.event.repository.name }}
           polaris_assessment_types: "SAST,SCA"
           ### Below configuration is used to enable feedback from Polaris security testing as pull request comment
-          polaris_prComment_enabled: true
+          #polaris_prComment_enabled: true
           polaris_upload_sarif_report: true
           github_token: ${{ secrets.TOKEN }}
           #network_airgap: true
