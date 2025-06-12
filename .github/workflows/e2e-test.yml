@@ -1,10 +1,10 @@
 name: CI-Polaris 
-    on:
+on:
         push:
             branches: [ main, master, develop, stage, release ]
         pull_request:
             branches: [ main, master, develop, stage, release ]  
-    jobs:
+jobs:
         polaris-scan:
             runs-on: [ self-hosted ]
             steps:
