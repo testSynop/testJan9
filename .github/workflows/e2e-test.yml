@@ -1,7 +1,7 @@
 name: CI-Polaris 
 on:
         push:
-            branches: [ main, master, develop, stage, release, polaris ]
+            branches: [ main, master, develop, stage, release ]
         pull_request:
             branches: [ main, master, develop, stage, release ]  
 jobs:
@@ -76,7 +76,9 @@ jobs:
     
                     ### Below configuration is used to enable feedback from Polaris security testing as pull request comment
                     polaris_prComment_enabled: true 
-                    github_token: ${{ secrets.GITHUB_TOKEN }} 
+                    github_token: ${{ secrets.GITHUB_TOKEN }}
+                    polaris_reports_sarif_create: true
+                    polaris_upload_sarif_report: true 
                     # Mandatory when polaris_prComment_enabled is set to 'true'
     
                     ### Mark build status if policy violating issues are found
