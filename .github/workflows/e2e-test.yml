@@ -54,7 +54,6 @@ jobs:
           polaris_prComment_enabled: true
           polaris_upload_sarif_report: true
           github_token: ${{ secrets.TOKEN }}
-          network_airgap: true
           # include_diagnostics: true
           # Mandatory when polaris_prComment_enabled is set to 'true'
           ### Uncomment below configuration if Synopsys Bridge diagnostic files needs to be uploaded
