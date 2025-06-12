@@ -3,7 +3,7 @@ on:
         push:
             branches: [ main, master, develop, stage, release, polaris ]
         pull_request:
-            branches: [ main, master, develop, stage, release ]  
+            branches: [ main, master, develop, stage, release, polaris ]  
 jobs:
         polaris-scan:
             runs-on: [ self-hosted ]
