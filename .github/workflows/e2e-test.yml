@@ -3,7 +3,7 @@ on:
   push:
     branches: [ main, master, develop, stage ]
   pull_request:
-    branches: [ release ]
+    branches: [ polaris ]
   workflow_dispatch:
 
 jobs:
