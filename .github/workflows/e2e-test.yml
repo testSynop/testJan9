@@ -23,8 +23,8 @@ jobs:
           polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
           include_diagnostics: true
           polaris_assessment_types: "SAST,SCA"
-          polaris_assessment_mode: SOURCE_UPLOAD
-          project_source_archive: "/Users/kirann/bridge-cli-bundle/bridge-cli-bundle-macos_arm/kiran.zip"
+          #polaris_assessment_mode: SOURCE_UPLOAD
+          #project_source_archive: "/Users/kirann/bridge-cli-bundle/bridge-cli-bundle-macos_arm/kiran.zip"
           #polaris_prComment_enabled: true 
           ### Coverity Connect users - Uncomment below
           # coverity_local: true
