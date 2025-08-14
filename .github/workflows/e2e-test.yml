@@ -1,10 +1,9 @@
-
-name: CI-Polaris-integration
+name: CI-Polaris 
 on:
   push:
-    branches: [ main, master, develop, stage ]
+    branches: [ main ]
   pull_request:
-    branches: [ release ]
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
@@ -13,7 +12,7 @@ jobs:
     steps:
       - name: Checkout Source
         uses: actions/checkout@v3
-      - name: Polaris Full Scan
+      - name: Polaris Scan
         uses: blackduck-inc/black-duck-security-scan@main
         with:
           ### SCANNING: Required fields
@@ -23,9 +22,7 @@ jobs:
           polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
           include_diagnostics: true
           polaris_assessment_types: "SAST,SCA"
-          #polaris_assessment_mode: "SOURCE_UPLOAD"
-          #project_source_archive: "/Users/kirann/bridge-cli-bundle/bridge-cli-bundle-macos_arm/OWASP-NodeGoat-master.zip"
-          #polaris_prComment_enabled: true 
+          polaris_prComment_enabled: true 
           ### Coverity Connect users - Uncomment below
           # coverity_local: true
           ### Uncomment below configuration if Synopsys Bridge diagnostic files needs to be uploaded
@@ -47,6 +44,7 @@ jobs:
         uses: blackduck-inc/black-duck-security-scan@main
         #uses: synopsys-sig/synopsys-action@main
         with:
+          bridgecli_download_url: "https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/latest/bridge-cli-bundle-macos_arm.zip"
           polaris_server_url: ${{ vars.POLARIS_SERVER_URL }}
           polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
           polaris_application_name: ${{ github.event.repository.name }}
