@@ -22,17 +22,16 @@ jobs:
           polaris_server_url: ${{ vars.POLARIS_SERVER_URL }}
           polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
           include_diagnostics: true
-          polaris_assessment_types: "SAST,SCA"
+          polaris_assessment_types: "SAST"
           #polaris_assessment_mode: "SOURCE_UPLOAD"
           #project_source_archive: "/Users/kirann/bridge-cli-bundle/bridge-cli-bundle-macos_arm/OWASP-NodeGoat-master.zip"
           #polaris_prComment_enabled: true 
           ### Coverity Connect users - Uncomment below
           # coverity_local: true
           ### Uncomment below configuration if Synopsys Bridge diagnostic files needs to be uploaded
-
           ### SARIF report generation and upload to GitHub Adavanced Security Tab: Uncomment below to enable
-          polaris_reports_sarif_create: true
-          polaris_upload_sarif_report: true
+          #polaris_reports_sarif_create: true
+          #polaris_upload_sarif_report: true
           
          # polaris_reports_sarif_file_path: '/Users/kirann/myagent/_work/OWASP-NodeGoat/OWASP-NodeGoat/.bridge/Polaris SARIF Generator/onereport.sarif.json'
           #          polaris_reports_sarif_file_path: '/Users/kirann/IdeaProjects/OWASP-NodeGoat/report.sarif.json' # File path (including file name) where SARIF report is created.
