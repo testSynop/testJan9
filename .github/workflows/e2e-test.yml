@@ -54,6 +54,7 @@ jobs:
           polaris_prComment_enabled: true
           polaris_upload_sarif_report: true
           github_token: ${{ secrets.TOKEN }}
+          include_diagnostics: true
           #network_airgap: true
           # include_diagnostics: true
           # Mandatory when polaris_prComment_enabled is set to 'true'
