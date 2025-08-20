@@ -42,7 +42,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }} # Required when polaris_upload_sarif_report is set as true
       - name: Polaris PR Scan
         if: ${{ github.event_name == 'pull_request' }}
-        uses: blackduck-inc/black-duck-security-scan@main
+        uses: blackduck-inc/black-duck-security-scan@SIGINT-2368
         #uses: synopsys-sig/synopsys-action@main
         with:
           polaris_server_url: ${{ vars.POLARIS_SERVER_URL }}
