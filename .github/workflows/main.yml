@@ -48,6 +48,8 @@ jobs:
           polaris_application_name: ${{ github.event.repository.name }}
           polaris_project_name: ${{ github.event.repository.name }}
           polaris_assessment_types: "SAST,SCA"
+          #bridgecli_download_url: "https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/latest/bridge-cli-bundle-macos_arm.zip"
+
           ### Below configuration is used to enable feedback from Polaris security testing as pull request comment
           polaris_prComment_enabled: true
           polaris_upload_sarif_report: true
